@@ -5,7 +5,7 @@
 
     <application
         android:icon="@mipmap/ic_launcher"
-        android:label="AwardLuxery"
+        android:label="Award Luxury"
 
         tools:replace="android:label,android:icon,android:theme"
 

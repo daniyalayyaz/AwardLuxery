@@ -64,6 +64,7 @@ class _WinnersState extends State<Winners> {
       ),
       body: Container(
         height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           color: Color(0xff07459c),
           image: DecorationImage(
@@ -75,121 +76,122 @@ class _WinnersState extends State<Winners> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Stack(children: <Widget>[
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        Color(0xffFFEA74),
-                        Color(0xffDB830F),
-                        Color(0xffF3CC29)
-                      ],
-                    ),
-                  ),
-                  child: Card(
-                    elevation: 0,
-                    color: Colors.transparent,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              left: 8.0, right: 8.0, top: 8.0),
-                          child: Row(
-                            children: [
-                              Text('Price Pool',
-                                  style: TextStyle(
-                                      color: Color(0xff0EA930),
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.bold)),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(5),
-                                    color: Color(0xff0EA930),
-                                  ),
-                                  padding: EdgeInsets.fromLTRB(10, 3, 10, 3),
-                                  child: Text('Rs 525',
-                                      style: TextStyle(
-                                          fontSize: 12,
-                                          color: Colors.white,
-                                          fontWeight: FontWeight.bold)),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 8.0, right: 8.0),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text('James Anderson',
-                                  style: TextStyle(
-                                      fontSize: 30,
-                                      fontWeight: FontWeight.w400,
-                                      color: Colors.white)),
-                              ElevatedButton(
-                                onPressed: () {},
-                                child: Text('Winner',
-                                    style: TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w600)),
-                                style: ButtonStyle(
-                                  shape: MaterialStateProperty.all<
-                                          RoundedRectangleBorder>(
-                                      RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(4),
-                                  )),
-                                  backgroundColor: MaterialStateProperty.all(
-                                      Color(0xff35B551)),
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                        // Padding(
-                        //   padding: const EdgeInsets.all(8.0),
-                        //   child: LinearPercentIndicator(
-                        //     lineHeight: 8.0,
-                        //     percent: 0.5,
-                        //     backgroundColor: Colors.white,
-                        //     progressColor: Colors.white,
-                        //   ),
-                        // ),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              left: 8.0, right: 8.0, bottom: 8.0),
-                          child: Text('5-12-2022',
-                              style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black.withOpacity(0.5),
-                              )),
-                        )
-                      ],
-                    ),
-                  ),
-                ),
-                FractionalTranslation(
-                  translation: Offset(0.0, -0.4),
-                  child: Align(
-                    child: CircleAvatar(
-                      backgroundImage: NetworkImage(
-                          'https://i.pinimg.com/originals/b1/92/4d/b1924dce177345b5485bb5490ab3441f.jpg'),
-                      radius: 30.0,
-                    ),
-                    alignment: FractionalOffset(0.9, 0.0),
-                  ),
-                ),
-              ]),
-            )
+            Text('No results announced yet!', style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700),)
+            // Padding(
+            //   padding: const EdgeInsets.all(8.0),
+            //   child: Stack(children: <Widget>[
+            //     Container(
+            //       decoration: BoxDecoration(
+            //         borderRadius: BorderRadius.circular(10),
+            //         gradient: LinearGradient(
+            //           begin: Alignment.topCenter,
+            //           end: Alignment.bottomCenter,
+            //           colors: [
+            //             Color(0xffFFEA74),
+            //             Color(0xffDB830F),
+            //             Color(0xffF3CC29)
+            //           ],
+            //         ),
+            //       ),
+            //       child: Card(
+            //         elevation: 0,
+            //         color: Colors.transparent,
+            //         child: Column(
+            //           crossAxisAlignment: CrossAxisAlignment.start,
+            //           children: [
+            //             Padding(
+            //               padding: const EdgeInsets.only(
+            //                   left: 8.0, right: 8.0, top: 8.0),
+            //               child: Row(
+            //                 children: [
+            //                   Text('Price Pool',
+            //                       style: TextStyle(
+            //                           color: Color(0xff0EA930),
+            //                           fontSize: 12,
+            //                           fontWeight: FontWeight.bold)),
+            //                   Padding(
+            //                     padding: const EdgeInsets.all(8.0),
+            //                     child: Container(
+            //                       decoration: BoxDecoration(
+            //                         borderRadius: BorderRadius.circular(5),
+            //                         color: Color(0xff0EA930),
+            //                       ),
+            //                       padding: EdgeInsets.fromLTRB(10, 3, 10, 3),
+            //                       child: Text('Rs 525',
+            //                           style: TextStyle(
+            //                               fontSize: 12,
+            //                               color: Colors.white,
+            //                               fontWeight: FontWeight.bold)),
+            //                     ),
+            //                   ),
+            //                 ],
+            //               ),
+            //             ),
+            //             Padding(
+            //               padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+            //               child: Row(
+            //                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //                 children: [
+            //                   Text('James Anderson',
+            //                       style: TextStyle(
+            //                           fontSize: 30,
+            //                           fontWeight: FontWeight.w400,
+            //                           color: Colors.white)),
+            //                   ElevatedButton(
+            //                     onPressed: () {},
+            //                     child: Text('Winner',
+            //                         style: TextStyle(
+            //                             fontSize: 12,
+            //                             fontWeight: FontWeight.w600)),
+            //                     style: ButtonStyle(
+            //                       shape: MaterialStateProperty.all<
+            //                               RoundedRectangleBorder>(
+            //                           RoundedRectangleBorder(
+            //                         borderRadius: BorderRadius.circular(4),
+            //                       )),
+            //                       backgroundColor: MaterialStateProperty.all(
+            //                           Color(0xff35B551)),
+            //                     ),
+            //                   )
+            //                 ],
+            //               ),
+            //             ),
+            //             // Padding(
+            //             //   padding: const EdgeInsets.all(8.0),
+            //             //   child: LinearPercentIndicator(
+            //             //     lineHeight: 8.0,
+            //             //     percent: 0.5,
+            //             //     backgroundColor: Colors.white,
+            //             //     progressColor: Colors.white,
+            //             //   ),
+            //             // ),
+            //             Padding(
+            //               padding: const EdgeInsets.only(
+            //                   left: 8.0, right: 8.0, bottom: 8.0),
+            //               child: Text('5-12-2022',
+            //                   style: TextStyle(
+            //                     fontSize: 12,
+            //                     fontWeight: FontWeight.bold,
+            //                     color: Colors.black.withOpacity(0.5),
+            //                   )),
+            //             )
+            //           ],
+            //         ),
+            //       ),
+            //     ),
+            //     FractionalTranslation(
+            //       translation: Offset(0.0, -0.4),
+            //       child: Align(
+            //         child: CircleAvatar(
+            //           backgroundImage: NetworkImage(
+            //               'https://i.pinimg.com/originals/b1/92/4d/b1924dce177345b5485bb5490ab3441f.jpg'),
+            //           radius: 30.0,
+            //         ),
+            //         alignment: FractionalOffset(0.9, 0.0),
+            //       ),
+            //     ),
+            //   ]),
+            // )
           ],
         ),
       ),

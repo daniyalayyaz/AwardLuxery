@@ -45,7 +45,8 @@ dependencies:
   flutter_html: 
   flutter_launcher_icons: 
   otp_text_field: 
-  # firebase_auth:
+  # firebase_auth: 1.1.0
+  # firebase_core: 1.8.0
 
 dev_dependencies:
   flutter_test:

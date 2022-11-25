@@ -101,7 +101,7 @@ class _DashboardState extends State<Dashboard> {
       drawer: Drawer(
        
         child: Container(
-           color: Colors.black.withOpacity(0.5),
+color:Colors.black,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

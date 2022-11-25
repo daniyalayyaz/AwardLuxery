@@ -4,6 +4,7 @@ import 'package:gametest/Pages/Login.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 // import 'package:firebase_auth/firebase_auth.dart';
+// import 'package:firebase_messaging/firebase_messaging.dart';
 // import 'package:lotteryapp/Pages/Dashboard.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter/services.dart';
@@ -55,10 +56,10 @@ class _RegisterState extends State<Register> {
   //         .createUserWithEmailAndPassword(email:email.text, password:Password.text)
   //         .then((value) async {
             
-  //       if (value.email != null) {
+  //       if (value.user!.email != null) {
   //         // saveuser(value.user!.email,value.user!.uid);
   //         // _formKey.currentState!.reset();
-  //       await  value.sendEmailVerification();
+  //       await  value.user!.sendEmailVerification();
   //       }
   //     });
   //     // if (newUser != null) {

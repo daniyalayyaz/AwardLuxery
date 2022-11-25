@@ -70,7 +70,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                       onPressed: () {
                           if (_formkey.currentState!.validate()) {
                         EasyLoading.showSuccess(
-                            'Reset link has been sent to your provided email successfully!');
+                            'Api not Work!');
                           }
                       },
                       child: Text(
