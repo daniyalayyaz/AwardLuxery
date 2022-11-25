@@ -1,5 +1,6 @@
 import 'dart:convert';
 //  import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:gametest/Pages/Login.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
@@ -79,10 +80,10 @@ class _RegisterState extends State<Register> {
 
   @override
   void initState() {
-    // FirebaseMessaging _messaging = FirebaseMessaging.instance;
-    // _messaging.subscribeToTopic("global").then((value) {
-    //   print("done");
-    // });
+    FirebaseMessaging _messaging = FirebaseMessaging.instance;
+    _messaging.subscribeToTopic("global").then((value) {
+      print("done");
+    });
     // TODO: implement initState
     super.initState();
   }
