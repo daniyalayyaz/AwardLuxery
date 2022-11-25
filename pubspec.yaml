@@ -41,9 +41,10 @@ dependencies:
   # firebase_messaging:
   # firebase_core: any
   shared_preferences: 
+  # flutter_launcher_icons: ^0.9.0
   flutter_easyloading: 
   flutter_html: 
-  flutter_launcher_icons: 
+  # flutter_launcher_icons: "^0.8.0"
   otp_text_field: 
   # firebase_auth: 1.1.0
   # firebase_core: 1.8.0
@@ -63,21 +64,28 @@ dev_dependencies:
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
-# The following section is specific to Flutter.
+# # The following section is specific to Flutter.
 # flutter_icons:
 #   android: "launcher_icon"
 #   ios: true
 #   image_path: "assets/Images/Lottery-Logo.png"
-#   min_sdk_android: 21 # android min sdk min:16, default 21
-#   web:
-#     generate: true
-#     image_path: "assets/Images/Lottery-Logo.png"
-#     background_color: "#hexcode"
-#     theme_color: "#hexcode"
-#   windows:
-#     generate: true
-#     image_path: "assets/Images/Lottery-Logo.png"
-#     icon_size: 48 # min:48, max:256, default: 48
+#   min_sdk_android: 19 # android min sdk min:16, default 21
+  
+# flutter_icons:
+#   android: "launcher_icon"
+#   ios: true
+#   image_path: "assets/Images/Lottery-Logo.png"
+
+  
+  # web:
+  #   generate: true
+  #   image_path: "assets/Images/Lottery-Logo.png"
+  #   background_color: "#hexcode"
+  #   theme_color: "#hexcode"
+  # windows:
+  #   generate: true
+  #   image_path: "assets/Images/Lottery-Logo.png"
+  #   icon_size: 48 # min:48, max:256, default: 48
 # dependency_overrides:
   
  
