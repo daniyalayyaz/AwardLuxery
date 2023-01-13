@@ -1,5 +1,5 @@
 import 'dart:convert';
-// import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:gametest/Pages/Dashboard.dart';
 import 'package:gametest/Pages/Forgetpassword.dart';
@@ -19,7 +19,7 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  // final _auth = FirebaseAuth.instance;
+  final _auth = FirebaseAuth.instance;
   final _formkey = GlobalKey<FormState>();
   bool _isObscure = true;
 
@@ -41,27 +41,26 @@ class _LoginState extends State<Login> {
 
     print('Logged In');
     if (res.statusCode == 200) {
-        preferences.setString('email', response["CustomerEmail"]);
+      preferences.setString('email', response["CustomerEmail"]);
       preferences.setString('fullname', response["fullname"]);
       preferences.setInt('Id', response["Id"]);
       preferences.setString('phone', response["phonenumber"]);
       EasyLoading.dismiss();
-      EasyLoading.showSuccess('Welcome! You are successfully logged in.');
-      Navigator.of(context).pushReplacementNamed(Dashboard.routename);
 
-//       final newUser = await _auth.signInWithEmailAndPassword(
-//                       email: email.text, password: pass.text);
+      final newUser = await _auth.signInWithEmailAndPassword(
+          email: email.text, password: pass.text);
 
-//                   if (newUser != null) {
-//                     if (newUser.isEmailVerified) {
-//                   }
-//     
-//       }
-//       else
-//       {
-//  EasyLoading.showSuccess('User Not Verify.');
+      if (newUser != null) {
+        if (newUser.user!.emailVerified) {
+          EasyLoading.showSuccess('Welcome! You are successfully logged in.');
 
-//       }
+          Navigator.of(context).pushReplacementNamed(Dashboard.routename);
+        } else {
+          EasyLoading.showInfo("User Not Verify");
+        }
+      } else {
+        EasyLoading.showSuccess('User Not Verify.');
+      }
     } else {
       EasyLoading.dismiss();
 

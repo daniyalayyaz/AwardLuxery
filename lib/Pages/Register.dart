@@ -1,5 +1,6 @@
 import 'dart:convert';
 //  import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:gametest/Pages/Login.dart';
 import 'package:http/http.dart' as http;
@@ -22,7 +23,7 @@ class _RegisterState extends State<Register> {
   final _formstate = GlobalKey<FormState>();
   bool _isObscure = true;
   bool _isConfirmPassObscure = true;
-  // final _auth = FirebaseAuth.instance;
+  final _auth = FirebaseAuth.instance;
   
 
   TextEditingController fullname = new TextEditingController();
@@ -50,29 +51,34 @@ class _RegisterState extends State<Register> {
     var response = json.decode(res.body);
     if (res.statusCode == 200) {
       EasyLoading.dismiss();
-      EasyLoading.showSuccess('Hurray! You are successfully registered.');
+      EasyLoading.showSuccess('Hurray! You are successfully registered Verifiy your account');
   
-  //     try {
-  //     final newUser = await _auth
-  //         .createUserWithEmailAndPassword(email:email.text, password:Password.text)
-  //         .then((value) async {
+      try {
+      final newUser = await _auth
+          .createUserWithEmailAndPassword(email:email.text, password:Password.text)
+          .then((value) async {
+            print(value);
             
-  //       if (value.user!.email != null) {
-  //         // saveuser(value.user!.email,value.user!.uid);
-  //         // _formKey.currentState!.reset();
-  //       await  value.user!.sendEmailVerification();
-  //       }
-  //     });
-  //     // if (newUser != null) {
+        if (value.user!.email != null) {
+          // saveuser(value.user!.email,value.user!.uid);
+          // _formKey.currentState!.reset();
+        await  value.user!.sendEmailVerification();
+        }
+        else
+        {
+          print("issue");
+        }
+      });
+      // if (newUser != null) {
         
-  //     //   EasyLoading.dismiss();
-  //     //   Navigator.pushNamed(context, LoginSuccessScreen.routeName); 
-  //     // }
-  //   } 
-  // catch (e) {
-  //     EasyLoading.showError(e.toString());
-  //     print(e);
-  //   }
+      //   EasyLoading.dismiss();
+      //   Navigator.pushNamed(context, LoginSuccessScreen.routeName); 
+      // }
+    } 
+  catch (e) {
+      EasyLoading.showError(e.toString());
+      print(e);
+    }
 
       Navigator.of(context).pushReplacementNamed(Login.routename);
     }
